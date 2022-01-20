@@ -120,4 +120,23 @@ extension EdgeInsets {
         return EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: size.spacing)
     }
     
+    /// Init with `Size` values.
+    /// - Parameter top: The `top` value, `.zero` by default.
+    /// - Parameter leading: The `leading` value, `.zero` by default.
+    /// - Parameter bottom: The `bottom` value, `.zero` by default.
+    /// - Parameter trailing: The `trailing` value, `.zero` by default.
+    public init(
+        top: Size = .zero,
+        leading: Size = .zero,
+        bottom: Size = .zero,
+        trailing: Size = .zero
+    ) {
+        self.init(
+            top: top.spacing,
+            leading: leading.spacing,
+            bottom: bottom.spacing,
+            trailing: trailing.spacing
+        )
+    }
+    
 }
