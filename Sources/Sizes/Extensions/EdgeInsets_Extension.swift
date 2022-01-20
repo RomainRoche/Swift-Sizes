@@ -11,6 +11,13 @@ import SwiftUI
 
 extension EdgeInsets {
     
+    /// `EdgeInsets` for all values.
+    /// - Parameter insets: The insets value for all directions.
+    /// - Returns: `EdgeInsets`.
+    public static func all(_ insets: CGFloat) -> EdgeInsets {
+        return EdgeInsets(top: insets, leading: insets, bottom: insets, trailing: insets)
+    }
+    
     /// `EdgeInsets` with `.leading` and `.trailing` values.
     /// - Parameter insets: The insets value for `.leading` and `.trailing`.
     /// - Returns: `EdgeInsets`.
@@ -59,43 +66,55 @@ extension EdgeInsets {
 
 extension EdgeInsets {
     
+    /// `EdgeInsets` for all values.
+    /// - Parameter size: The insets size for all directions.
+    /// - Returns: `EdgeInsets`.
+    public static func all(_ size: Size) -> EdgeInsets {
+        return EdgeInsets(
+            top: size.spacing,
+            leading: size.spacing,
+            bottom: size.spacing,
+            trailing: size.spacing
+        )
+    }
+    
     /// `EdgeInsets` with `.leading` and `.trailing` sizes.
-    /// - Parameter insets: The insets sizes for `.leading` and `.trailing`.
+    /// - Parameter size: The insets sizes for `.leading` and `.trailing`.
     /// - Returns: `EdgeInsets`.
     public static func horizontal(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: 0, leading: size.spacing, bottom: 0, trailing: size.spacing)
     }
     
     /// `EdgeInsets` with `.top` and `.bottom` sizes.
-    /// - Parameter insets: The insets sizes for `.top` and `.bottom`.
+    /// - Parameter size: The insets sizes for `.top` and `.bottom`.
     /// - Returns: `EdgeInsets`.
     public static func vertical(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: size.spacing, leading: 0, bottom: size.spacing, trailing: 0)
     }
     
     /// `EdgeInsets` with `.top` size.
-    /// - Parameter insets: The size value for `.top`.
+    /// - Parameter size: The size value for `.top`.
     /// - Returns: `EdgeInsets`.
     public static func top(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: size.spacing, leading: 0, bottom: 0, trailing: 0)
     }
     
     /// `EdgeInsets` with `.bottom` size.
-    /// - Parameter insets: The size value for `.bottom`.
+    /// - Parameter size: The size value for `.bottom`.
     /// - Returns: `EdgeInsets`.
     public static func bottom(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: 0, leading: 0, bottom: size.spacing, trailing: 0)
     }
     
     /// `EdgeInsets` with `.leading` size.
-    /// - Parameter insets: The size value for `.leading`.
+    /// - Parameter size: The size value for `.leading`.
     /// - Returns: `EdgeInsets`.
     public static func leading(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: 0, leading: size.spacing, bottom: 0, trailing: 0)
     }
     
     /// `EdgeInsets` with `.trailing` size.
-    /// - Parameter insets: The size value for `.trailing`.
+    /// - Parameter size: The size value for `.trailing`.
     /// - Returns: `EdgeInsets`.
     public static func trailing(_ size: Size) -> EdgeInsets {
         return EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: size.spacing)
