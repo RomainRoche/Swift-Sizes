@@ -5,7 +5,7 @@
 //  Created by Romain Roche on 20/01/2022.
 //
 
-import Foundation
+import CoreGraphics
 
 // MARK: - Size enum
 
